@@ -244,6 +244,67 @@ class HolaMundo
  	    for i in otro3
  	    	puts i
  	    end
+
+
+
+ 	    ### HASH (DICCIONARIOS)
+
+
+ 	    cursos = {'ruby'=>21, 'pag_web'=>15}
+ 	    puts cursos['ruby']
+
+ 	    cursos['html5'] = 25 # añadir nuevo elemento
+ 	    puts cursos
+
+ 	    cursos.each do |key,value|
+ 	    	puts "#{key} tiene #{value} videos"
+ 	    end 
+
+
+ 	    indices = cursos.keys # o values
+ 	    for i in indices
+ 	    	puts i
+ 	    end 
+
+
+
+ 	    ### LAMBDAS (funciones anonimas)
+
+
+ 	    lamb = lambda {"hola mundo"}
+ 	    puts lamb.call 
+
+ 	    lamb = lambda {|numero| numero+1} 
+ 	    puts lamb.call(1) 
+
+
+ 	    lambd2 = lambda do |nombre|
+ 	    	if nombre == 'pepe'
+ 	    		return 'hola pepe'
+ 	    	else
+ 	    		return 'hola extranio'
+ 	    	end
+ 	    end
+ 	    puts lambd2.call('pedro')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 	end
 end
@@ -251,4 +312,4 @@ end
 # Hola....
 objeto = HolaMundo.new()
 objeto.saluda
-#gets()
+gets()
